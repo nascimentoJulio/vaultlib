@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Db2RgIaiqWzpIuERqk9Z7HghG58uNM7md7DraBM08gDsL2/ixOKG9xZehNJvU3qr/JKHMapTuXTnUJiaqHwJRQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\julio.nascimento\\Desktop\\vaultlib\\vault\\VautlLib\\VautlLib\\VautlLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\julio.nascimento\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\julio.nascimento\\.nuget\\packages\\vaultsharp\\1.12.2\\vaultsharp.1.12.2.nupkg.sha512"
+  ],
+  "logs": []
+}

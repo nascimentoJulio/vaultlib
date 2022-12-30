@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VautlLib", "VautlLib\VautlLib.csproj", "{07D4441F-065F-49C3-8C13-EA100AC8BECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaultApi", "VaultApi\VaultApi.csproj", "{147E32D4-12E0-410C-8876-E7EFB6B1EAE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07D4441F-065F-49C3-8C13-EA100AC8BECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D4441F-065F-49C3-8C13-EA100AC8BECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D4441F-065F-49C3-8C13-EA100AC8BECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D4441F-065F-49C3-8C13-EA100AC8BECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147E32D4-12E0-410C-8876-E7EFB6B1EAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147E32D4-12E0-410C-8876-E7EFB6B1EAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147E32D4-12E0-410C-8876-E7EFB6B1EAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147E32D4-12E0-410C-8876-E7EFB6B1EAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B17C4BC-0295-49EF-B87F-4ACFA316CFF2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  vault:
+    image: vault
+    user: root
+    cap_add:
+      - "IPC_LOCK"
+    ports:
+      - 8200:8200
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: mytoken
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:1234
+    volumes:
+      - ./vault/auditoria:/vault/logs
+      - ./volumes/config:/vault/config
+    command: vault server -dev -config=/vault/config/vault.json 
