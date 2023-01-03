@@ -22,11 +22,11 @@ namespace VaultApi.Controllers
             return Ok(credentials.Data.Data);
         }
 
-        [HttpGet("lib/{path}")]
+        [HttpGet("/lib/{path}")]
         public async Task<IActionResult> GetCredentialsFromVaultLib(string path)
         {
-            var credentials = await _vaultHandler.GetCredentials(path, null);
-            return Ok(credentials.Data.Data);
+            var credentials = await _vaultHandler.GetCredentialsFromVaultLib(path, null);
+            return Ok(credentials);
         }
 
 

@@ -3,7 +3,6 @@ version: '3.8'
 services:
   vault:
     image: vault
-    user: root
     cap_add:
       - "IPC_LOCK"
     ports:
@@ -14,4 +13,4 @@ services:
     volumes:
       - ./vault/auditoria:/vault/logs
       - ./volumes/config:/vault/config
-    command: vault server -dev -config=/vault/config/vault.json 
+    entrypoint: vault server -dev -config=/vault/config/vault.json 

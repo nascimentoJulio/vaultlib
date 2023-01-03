@@ -1,12 +1,14 @@
 {
-  "storage": { "file": { "path": "/vault/file" } },
-  "path": {
-    "/sys/audit/*": {
-      "capabilities": ["update", "create", "delete", "sudo"]
+  "backend": {
+    "file": {
+      "path": "/vault/file"
     }
   },
-  "listener": [{ "tcp": { "address": "0.0.0.0:8200", "tls_disable": true } }],
-  "default_lease_ttl": "168h",
-  "max_lease_ttl": "720h",
+  "listener": {
+    "tcp":{
+      "address": "0.0.0.0:8200",
+      "tls_disable": 1
+    }
+  },
   "ui": true
 }

@@ -10,9 +10,10 @@ namespace VautlLib
     public class VaultHandler : IVaultHandler
     {
         private readonly HttpClient _client;
-        private static IVaultClient _vaultClient = null;
+        private static IVaultClient _vaultClient;
         public VaultHandler(HttpClient client)
         {
+            _vaultClient = InstanceVaultClient();
             _client=client;
         }
 
@@ -34,7 +35,9 @@ namespace VautlLib
 
         public async Task<object> GetCredentialsFromVaultLib(string path, Dictionary<string, string>? headers)
         {
-            return await InstanceVaultClient().V1.Secrets.KeyValue.V2.ReadSecretAsync(path: path, mountPoint: "/secret/data");
+            var a = _vaultClient.Settings.AuthMethodInfo.ReturnedLoginAuthInfo;
+            var b = _vaultClient.V1.Secrets.KeyValue.V2.ReadSecretAsync(path: path, mountPoint: "secret").Result;
+            return b;
         }
 
         private IVaultClient InstanceVaultClient()
@@ -42,7 +45,7 @@ namespace VautlLib
             if (_vaultClient == null)
             {
                 IAuthMethodInfo authMethod = new TokenAuthMethodInfo(vaultToken: "mytoken");
-                VaultClientSettings vaultClientSettings = new VaultClientSettings("http://localhost:8200", authMethod);
+                VaultClientSettings vaultClientSettings = new VaultClientSettings("http://127.0.0.1:8200", authMethod);
                 _vaultClient = new VaultClient(vaultClientSettings);
             }
             return _vaultClient;
