@@ -35,9 +35,7 @@ namespace VautlLib
 
         public async Task<object> GetCredentialsFromVaultLib(string path, Dictionary<string, string>? headers)
         {
-            var a = _vaultClient.Settings.AuthMethodInfo.ReturnedLoginAuthInfo;
-            var b = _vaultClient.V1.Secrets.KeyValue.V2.ReadSecretAsync(path: path, mountPoint: "secret").Result;
-            return b;
+           return await _vaultClient.V1.Secrets.KeyValue.V2.ReadSecretAsync(path: path, mountPoint: "secret");
         }
 
         private IVaultClient InstanceVaultClient()
